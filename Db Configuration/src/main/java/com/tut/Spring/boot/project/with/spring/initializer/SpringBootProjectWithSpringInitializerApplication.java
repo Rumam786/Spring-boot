@@ -16,8 +16,8 @@ public class SpringBootProjectWithSpringInitializerApplication {
 	user.setName("Ruman ALi");
 	user.setCity("Islamabad");
 	user.setStatus("I am a Developer");
-	User user1 = entities.save(user);
-		System.out.println(user1);
+	User user2 = entities.save(user);
+		System.out.println(user2);
 	}
 
 }
