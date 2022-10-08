@@ -13,7 +13,7 @@ public class SpringBootProjectWithSpringInitializerApplication {
 	ApplicationContext context =SpringApplication.run(SpringBootProjectWithSpringInitializerApplication.class, args);
 	entities entities = context.getBean(entities.class);
 	User user = new User();
-	user.setName("Ruman ALi");
+	user.setName("Ruman Ali");
 	user.setCity("Islamabad");
 	user.setStatus("I am a Developer");
 	User user2 = entities.save(user);
