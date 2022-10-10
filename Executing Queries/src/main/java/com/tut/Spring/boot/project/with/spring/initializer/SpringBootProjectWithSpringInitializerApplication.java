@@ -4,6 +4,7 @@ import com.tut.Spring.boot.project.with.spring.initializer.dao.entities;
 import com.tut.Spring.boot.project.with.spring.initializer.entities.User;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,5 +22,18 @@ public class SpringBootProjectWithSpringInitializerApplication {
 
     List<User> users = entities.getAll();
     System.out.println(users);
+
+    List<User> users1 = entities.getUserByName("Ruman ALi");
+    System.out.println(users1);
+
+    List<User> users2 = entities.getUserByNameAndCity("Arslan", "Burewala");
+    users2.forEach(new Consumer<User>() {
+      @Override
+      public void accept(User user) {
+        System.out.println(user);
+      }
+    });
+    List<User> users3 = entities.getUsers();
+    System.out.println(users3);
   }
 }
